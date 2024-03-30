@@ -5,7 +5,7 @@ from starlette.staticfiles import StaticFiles
 app = FastAPI(
     title="YouTube GodMode",
     description="Extra youtube options.",
-    version="0.0.1",
+    version="0.0.2",
     openapi_tags=[{
         "name": "youtube",
         "description": "Operations with YouTube videos",
