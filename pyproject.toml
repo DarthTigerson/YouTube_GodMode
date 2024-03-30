@@ -1,0 +1,21 @@
+[project]
+name = "youtube godmode"
+version = "0.0.1"
+description = "Youtube Tools"
+authors = [
+    {name = "Thomas Bonnici", email = "thomas.bonnici@icloud.com"},
+]
+license = {text = "MIT"}
+dependencies = [
+    "pytube>=15.0.0",
+    "moviepy>=1.0.3",
+    "fastapi>=0.110.0",
+    "uvicorn>=0.29.0",
+]
+requires-python = ">=3.11"
+
+[build-system]
+requires = ["pdm-pep517>=1.0.0"]
+build-backend = "pdm.pep517.api"
+
+[tool.pdm]
