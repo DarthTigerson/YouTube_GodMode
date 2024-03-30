@@ -23,7 +23,7 @@ async def to_mp3(youtube_url: str = Query(..., description="The URL of the YouTu
     if video is None:
         raise HTTPException(status_code=404, detail="No audio stream found for this YouTube video.")
     
-    out_file = video.download(output_path='temp/')
+    out_file = video.download(output_path='app/temp/')
     
     base, ext = os.path.splitext(out_file)
     new_file = f"{base}.mp3"
@@ -55,7 +55,7 @@ async def to_mp4(youtube_url: str = Query(..., description="The URL of the YouTu
     if video is None:
         raise HTTPException(status_code=404, detail="No suitable video stream found for this YouTube video.")
     
-    out_file = video.download(output_path='temp/')
+    out_file = video.download(output_path='app/temp/')
     
     # No need to convert, pytube downloads in MP4 format
     # Return the MP4 file directly
