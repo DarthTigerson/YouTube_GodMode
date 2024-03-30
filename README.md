@@ -19,22 +19,22 @@ YouTube GodMode is a FastAPI application designed to provide additional function
 
 You can run this application using Docker. First, clone the repository:
 
-\```bash
+```bash
 git clone https://github.com/DarthTigerson/YouTube_GodMode/
 cd YouTube_GodMode
-\```
+```
 
 Then, build the Docker image:
 
-\```bash
+```bash
 docker build -t youtube_godmode .
-\```
+```
 
 After building the image, run the container:
 
-\```bash
+```bash
 docker run -d -p 8000:8000 youtube_godmode
-\```
+```
 
 The application will be available at `http://127.0.0.1:8000`.
 
@@ -44,15 +44,15 @@ If you prefer not to use Docker, ensure you have Python 3.12 and pip installed o
 
 Install the dependencies using PDM:
 
-\```bash
+```bash
 pdm install
-\```
+```
 
 Run the application:
 
-\```bash
+```bash
 pdm run uvicorn main:app --host 0.0.0.0 --port 8000
-\```
+```
 
 ## Usage
 
