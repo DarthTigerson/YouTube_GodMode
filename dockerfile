@@ -1,5 +1,5 @@
 # Use an official lightweight Python image
-FROM python:3.11-slim
+FROM python:3.12-slim
 
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -17,14 +17,11 @@ RUN pip install pdm
 # Copy the project files into the container at /app
 COPY . .
 
-# Make sure run.sh is executable
-RUN chmod +x run.sh
-
 # Install project dependencies
 RUN pdm install --prod
 
-# Expose the port the app runs on
+# Document that the service listens on port 8000
 EXPOSE 8000
 
-# Use the run.sh script to start the service
-CMD ["./run.sh"]
+# Start the Uvicorn server
+CMD ["pdm", "run", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
