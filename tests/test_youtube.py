@@ -1,7 +1,7 @@
 from fastapi.testclient import TestClient
 from unittest.mock import patch, MagicMock
 import pytest
-from starlette.responses import Response  # Import the correct Response
+from starlette.responses import Response
 
 from app.main import app
 
